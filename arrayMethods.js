@@ -123,13 +123,11 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 
 // CODE HERE
 // const bobsTotal = purchases.reduce((acc, curr) => {
-//   let add = 0;
-
 //   if (curr.owner === "Bob") {
-//     add = curr.price;
+//     acc += curr.price;
 //   }
 
 //   return acc;
-// });
+// }, 0);
 const bobsTotal = purchases.reduce((acc, curr) => curr.owner === "Bob" ? acc + curr.price : acc, 0);
 console.log(bobsTotal);
